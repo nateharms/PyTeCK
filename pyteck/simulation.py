@@ -222,9 +222,9 @@ class Simulation(object):
 
         # Set end time of simulation to 100 times the experimental ignition delay
         if hasattr(self.properties.ignition_delay, 'value'):
-            self.time_end = 100. * self.properties.ignition_delay.value.magnitude
+            self.time_end = 1000. * self.properties.ignition_delay.value.magnitude
         else:
-            self.time_end = 100. * self.properties.ignition_delay.magnitude
+            self.time_end = 1000. * self.properties.ignition_delay.magnitude
 
         # Initial temperature needed in Kelvin for Cantera
         self.properties.temperature.ito('kelvin')
